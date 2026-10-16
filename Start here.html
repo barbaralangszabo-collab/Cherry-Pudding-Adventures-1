@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>body{margin:0}</style></head><body>
+<title>Cherry &amp; Pudding's Adventures</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Grandstander:wght@600;800&display=swap">
+<style>
+/* Layout: a bookshelf. Series name, then two picture-book volumes side by side, each opening its own app. */
+:root{
+  --paper:#fbf6ec; --page:#fffdf8; --ink:#3d2a1f; --ink-soft:#7a6252; --line:#e6dac6;
+  --mint:#49E8CC; --mint-deep:#27b49b; --mint-ink:#0b7a68; --on-mint:#0f3b34; --spine:#12695d;
+  --cherry:#c0392b; --pudding:#d9661b; --shadow:rgba(80,50,25,.16);
+  --f-display:"Grandstander","Comic Sans MS","Chalkboard SE",system-ui,sans-serif;
+  --f-body:"Andika","Trebuchet MS",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#231a17;--page:#2d2320;--ink:#f3e7d6;--ink-soft:#c3ae98;--line:#46362f;--mint-ink:#49E8CC;--cherry:#ff6f5e;--pudding:#ff9a4d;--shadow:rgba(0,0,0,.45);color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#231a17;--page:#2d2320;--ink:#f3e7d6;--ink-soft:#c3ae98;--line:#46362f;--mint-ink:#49E8CC;--cherry:#ff6f5e;--pudding:#ff9a4d;--shadow:rgba(0,0,0,.45);color-scheme:dark}
+html,body{min-height:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:19px;line-height:1.5;
+  background-image:radial-gradient(var(--line) .6px,transparent .7px);background-size:22px 22px}
+.wrap{max-width:1080px;margin:0 auto;padding-block:28px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+.brand{font-family:var(--f-display);font-weight:600;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+h1{margin:6px 0 0;font-family:var(--f-display);font-weight:800;font-size:clamp(38px,6vw,64px);line-height:1;text-wrap:balance;
+  background:linear-gradient(100deg,#0a5f54,#17a48c 45%,var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 .c{color:var(--cherry);-webkit-text-fill-color:var(--cherry)} h1 .p{color:var(--pudding);-webkit-text-fill-color:var(--pudding)}
+.lede{margin:10px 0 0;max-width:46ch;color:var(--ink-soft);font-size:21px}
+.shelf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.vol.soon{border-style:dashed;box-shadow:none;background:transparent;justify-content:center;min-height:160px}
+.vol{display:flex;flex-direction:column;gap:16px;background:var(--page);border:2px solid var(--line);border-radius:22px;padding:18px;text-decoration:none;color:inherit;
+  box-shadow:0 18px 40px var(--shadow);transition:transform .15s,border-color .15s}
+.vol:hover{transform:translateY(-3px);border-color:var(--mint)}
+.vol:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+.covers{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:var(--spine);border-radius:14px;padding:10px}
+.covers img{display:block;width:100%;max-width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;border:4px solid #fffaf0}
+.vol-no{font-family:var(--f-display);font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mint-ink)}
+.vol h2{margin:2px 0 0;font-family:var(--f-display);font-weight:800;font-size:30px;line-height:1.1;text-wrap:balance}
+.eps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.eps li{display:flex;gap:12px;align-items:baseline;border-top:1.5px dashed var(--line);padding-top:8px}
+.eps b{font-family:var(--f-display);font-weight:600;font-size:20px}
+.eps small{display:block;color:var(--ink-soft);font-size:15.5px}
+.num{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:var(--on-mint);font-family:var(--f-display);font-weight:800;font-size:16px;transform:translateY(5px)}
+.go{align-self:flex-start;margin-top:auto;background:var(--mint);color:var(--on-mint);border-radius:999px;padding:11px 22px;font-family:var(--f-display);font-weight:800;font-size:19px;box-shadow:0 4px 0 var(--mint-deep)}
+.note{color:var(--ink-soft);font-size:16.5px;max-width:70ch;margin:0}
+@media (max-width:760px){.shelf{grid-template-columns:1fr}.vol h2{font-size:26px}}
+@media (prefers-reduced-motion:reduce){.vol{transition:none}}
+</style>
+<div class="wrap">
+  <header>
+    <div class="brand">Piece of Cake · Story Time</div>
+    <h1><span class="c">Cherry</span> &amp; <span class="p">Pudding</span>'s Adventures</h1>
+    <p class="lede">True stories about Alice's two cats, read by Alice. Choose a book, listen, read along and play.</p>
+  </header>
+  <main class="shelf">
+    <a class="vol" href="cherry-pudding-vol1.html">
+      <div class="covers"><img src="cov1.jpg" alt="Cherry and Pudding sitting side by side"><img src="cov2.jpg" alt="Pudding peeking into the bathroom sink"></div>
+      <div><div class="vol-no">Volume 1</div><h2>Meet the Cats</h2></div>
+      <ul class="eps">
+        <li><span class="num">1</span><span><b>Meet Cherry &amp; Pudding</b><small>2 minutes · 6 pages</small></span></li>
+        <li><span class="num">2</span><span><b>Pudding Loves Water!</b><small>3 minutes · 7 pages · 3 mini-games</small></span></li>
+      </ul>
+      <span class="go">Open Volume 1 →</span>
+    </a>
+    <a class="vol" href="cherry-pudding-vol2.html">
+      <div class="covers"><img src="cov3.jpg" alt="Cherry, a small tabby kitten, by a sunny window"><img src="cov4.jpg" alt="Cherry at the top of a very tall tree"></div>
+      <div><div class="vol-no">Volume 2</div><h2>Where's Cherry?</h2></div>
+      <ul class="eps">
+        <li><span class="num">3</span><span><b>Part 1: The Missing Cherry</b><small>8 minutes · 11 pages</small></span></li>
+      </ul>
+      <span class="go">Open Volume 2 →</span>
+    </a>
+    <a class="vol" href="cherry-pudding-vol3.html">
+      <div class="covers"><img src="cov5.jpg" alt="Alice, Richie and the rescue expert under the tree at night"><img src="cov6.jpg" alt="Cherry holding on to a branch"></div>
+      <div><div class="vol-no">Volume 3</div><h2>The Big Rescue</h2></div>
+      <ul class="eps">
+        <li><span class="num">3</span><span><b>Part 2: The Big Rescue</b><small>7½ minutes · 10 pages · pictures coming soon</small></span></li>
+      </ul>
+      <span class="go">Open Volume 3 →</span>
+    </a>
+    <div class="vol soon">
+      <div class="vol-no">Volume 4</div><h2>Coming soon</h2>
+      <p class="note">More true Cherry and Pudding adventures are on the way.</p>
+    </div>
+  </main>
+  <p class="note">Each volume has its own 3-day plan, tasks and stars. Stars are saved on this device. Teachers can also use each book as a downloaded file that works offline.</p>
+</div>
+
+</body></html>
