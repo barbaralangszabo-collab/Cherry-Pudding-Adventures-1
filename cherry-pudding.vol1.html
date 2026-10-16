@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>body{margin:0}</style></head><body>
-<title>Cherry &amp; Pudding · Volume 1</title>
+<title>Meet the Cats · Cherry &amp; Pudding</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Grandstander:wght@500;700;800&display=swap">
@@ -3387,7 +3387,7 @@ function applyEpisode(n){
   document.querySelectorAll('.ep[data-ep]').forEach(b=>{const on=+b.dataset.ep===n;b.classList.toggle('on',on);b.setAttribute('aria-current',on?'true':'false')});
   page=0;ended=false;waitingTurn=false;audio.currentTime=0;$('seek').value=0;$('cur').textContent=fmt(0);render(false);
 }
-const VOL={"eps": [1, 2], "name": "Volume 1", "title": "Cherry & Pudding · Volume 1", "more": [{"n": "2", "href": "cherry-pudding-vol2.html", "title": "Volume 2", "sub": "Where’s Cherry? Parts 1 & 2"}, {"n": "3", "href": "cherry-pudding-vol3.html", "title": "Volume 3", "sub": "Gifts, Gifts and More Gruesome Gifts!"}]};
+const VOL={"eps": [1, 2], "name": "Meet the Cats", "title": "Meet the Cats · Cherry & Pudding", "more": [{"n": "2", "href": "cherry-pudding-vol2.html", "title": "Where’s Cherry?", "sub": "Where’s Cherry? Parts 1 & 2"}, {"n": "3", "href": "cherry-pudding-vol3.html", "title": "Pudding’s Presents", "sub": "Gifts, Gifts and More Gruesome Gifts!"}]};
 document.title=VOL.title;
 const SERIES=[
  {v:1,file:'cherry-pudding-vol1.html',items:[{ep:1,n:'1',t:'Meet Cherry & Pudding',sub:'6 pages'},{ep:2,n:'2',t:'Pudding Loves Water!',sub:'7 pages'}]},
