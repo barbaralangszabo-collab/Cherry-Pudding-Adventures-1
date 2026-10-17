@@ -1,5 +1,5 @@
-/* Cherry & Pudding offline helper. Version 20261017102054 */
-const SHELL='cp-shell-20261017102054',MEDIA='cp-media';
+/* Cherry & Pudding offline helper. Version 20261017123237 */
+const SHELL='cp-shell-20261017123237',MEDIA='cp-media';
 self.addEventListener('install',e=>{e.waitUntil(caches.open(SHELL).then(c=>c.addAll(['./','index.html','manifest.webmanifest','icon-192.png','favicon.png'])).catch(()=>{}).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith('cp-shell')&&k!==SHELL).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{

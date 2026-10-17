@@ -988,6 +988,65 @@ a.ep.more .ep-n{background:var(--custard);color:var(--on-cherry)}
 /* v22 continue reading */
 .restart-link{display:block;margin:10px 0 0;padding:6px 2px;background:none;border:0;color:var(--mint-ink,#0b7a68);font:inherit;font-size:16px;font-weight:700;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .restart-link[hidden]{display:none}
+/* v23 how-to link + episode switcher */
+#cover .cta{flex-direction:column;align-items:flex-start;gap:6px}
+#cover .cta .btn-big{align-self:flex-start}
+#cover .cta .restart-link{margin:4px 0 0}
+.howto-link{display:inline-flex;align-items:center;gap:6px;padding:6px 2px;background:none;border:0;color:var(--mint-ink,#0b7a68);font:inherit;font-size:16px;font-weight:700;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.howto-box{margin:14px 0 0;padding:16px 18px 12px;background:var(--page,#fffdf8);border:2px solid var(--mint,#49E8CC);border-radius:18px;box-shadow:0 6px 18px rgba(80,50,25,.10)}
+.howto-box[hidden]{display:none}
+.howto-box .howto{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.howto-box .howto li{display:flex;gap:10px;align-items:flex-start;font-size:17px;line-height:1.45}
+.howto-box .h-ic{flex:none;width:28px;text-align:center}
+.howto-close{margin:12px 0 0;padding:7px 14px;border-radius:999px;border:2px solid var(--line,#e6dac6);background:transparent;color:var(--ink,#3d2a1f);font:inherit;font-size:15px;font-weight:700;cursor:pointer}
+.ep-switch{display:flex;align-items:center;gap:10px;margin:0 0 14px;padding:10px 12px;background:var(--page,#fffdf8);border:2px solid var(--line,#e6dac6);border-radius:18px}
+.ep-sw-mid{flex:1;min-width:0;text-align:center;line-height:1.25}
+.ep-sw-mid small{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft,#7a6252);font-weight:700}
+.ep-sw-mid b{display:block;font-size:17px}
+.ep-sw-btn{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 14px;border-radius:999px;border:2px solid var(--mint-deep,#27b49b);background:var(--mint,#49E8CC);color:var(--on-mint,#0f3b34);font:inherit;font-size:15px;font-weight:800;cursor:pointer;white-space:nowrap}
+.ep-sw-btn>span[aria-hidden]{font-size:22px;line-height:1}
+.ep-sw-btn[hidden]{visibility:hidden;display:inline-flex}
+@media (max-width:640px){.ep-switch{flex-wrap:wrap;gap:8px}.ep-sw-mid{order:-1;flex-basis:100%}.ep-sw-btn{flex:1;justify-content:center}.ep-sw-btn[hidden]{display:none}}
+/* v24 friendlier book home */
+.level-row.lv2{display:block;padding:16px 18px}
+.level-row.lv2>div:first-child b{font-size:22px}
+.level-row.lv2 .level{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;background:none;border:0;border-radius:0;padding:0}
+.level-row.lv2 .lv-card{display:flex;align-items:flex-start;gap:12px;text-align:left;padding:14px 16px;border-radius:18px;border:3px solid var(--line);background:var(--paper,#fbf6ec);color:var(--ink);font-family:var(--f-body);font-weight:400;font-size:16px;cursor:pointer;transition:transform .12s,border-color .12s;min-height:96px}
+.level-row.lv2 .lv-card:hover{transform:translateY(-2px);border-color:var(--mint-deep,#27b49b)}
+.level-row.lv2 .lv-card.on{border-color:var(--mint-deep,#27b49b);background:var(--custard-soft,#e0faf5);box-shadow:0 4px 0 var(--mint-deep,#27b49b)}
+.lv-ic{font-size:34px;line-height:1;flex:none}
+.lv-tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.lv-tx b{font-family:var(--f-display);font-weight:800;font-size:20px;color:var(--ink)}
+.lv-age{font-weight:700;color:var(--mint-ink,#0b7a68);font-size:15px}
+.lv-tx small{color:var(--ink-soft);font-size:15px;line-height:1.35;opacity:1}
+.lv-ok{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:17px;border:2px solid var(--line);color:transparent}
+.lv-card.on .lv-ok{background:var(--mint-deep,#27b49b);border-color:var(--mint-deep,#27b49b);color:#fff}
+@media (max-width:560px){.level-row.lv2 .level{grid-template-columns:1fr}.level-row.lv2 .lv-card{min-height:0}}
+#foldPlan .f-ic{background:#d6f7ef} #foldStk .f-ic{background:#fff1bf} #foldExtras .f-ic{background:#ffe2d6} #foldAll .f-ic{background:#e8e2f7} #foldWs .f-ic{background:#dcecff}
+#foldPlan{border-color:var(--mint,#49E8CC)}
+#planSum{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:4px}
+.ps-dots{display:inline-flex;gap:5px}
+.ps-d{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:13px;background:var(--line);color:var(--ink-soft)}
+.ps-d.ok{background:var(--leaf,#6aa84f);color:#fff}
+.ps-d.now{background:var(--mint,#49E8CC);color:var(--on-mint,#0f3b34);box-shadow:0 0 0 3px rgba(39,180,155,.25)}
+.ps-t{font-size:15px}
+.day.today{border-color:var(--mint-deep,#27b49b);box-shadow:0 0 0 3px rgba(73,232,204,.35)}
+.day-top{position:relative}
+.today-tag{margin-left:auto;align-self:flex-start;background:var(--mint,#49E8CC);color:var(--on-mint,#0f3b34);font-family:var(--f-display);font-weight:800;font-size:13px;padding:3px 10px;border-radius:999px}
+.stk-bar{display:inline-block;width:70px;height:10px;border-radius:99px;background:var(--line);margin-right:8px;vertical-align:middle;overflow:hidden}
+.stk-bar i{display:block;height:100%;background:linear-gradient(90deg,#f2bf3f,#ffd968);border-radius:99px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #foldPlan .f-ic,:root:not([data-theme="light"]) #foldStk .f-ic,:root:not([data-theme="light"]) #foldExtras .f-ic,:root:not([data-theme="light"]) #foldAll .f-ic,:root:not([data-theme="light"]) #foldWs .f-ic{background:var(--custard-soft)}}
+.level-row.lv2 .lv-tx small,.level-row.lv2 .lv-tx b,.level-row.lv2 .lv-age{background:none!important;box-shadow:none!important;text-decoration:none}
+.day-tabs{display:none}
+@media (max-width:900px){
+  .day-tabs{display:flex;gap:6px;margin:4px 0 12px;background:var(--paper,#fbf6ec);border:2px solid var(--line);border-radius:999px;padding:4px}
+  .day-tab{flex:1;border:0;background:transparent;border-radius:999px;padding:10px 6px;font-family:var(--f-display);font-weight:800;font-size:16px;color:var(--ink-soft);cursor:pointer;white-space:nowrap}
+  .day-tab span{display:block;font-family:var(--f-body);font-size:12px;font-weight:700;color:var(--mint-ink,#0b7a68)}
+  .day-tab.on{background:var(--mint,#49E8CC);color:var(--on-mint,#0f3b34)}
+  .day-tab.on span{color:var(--on-mint,#0f3b34)}
+  .days.tabbed .day{display:none}
+  .days.tabbed .day.sel{display:flex}
+}
 /* v14: phone polish (must stay last) */
 @media (max-width:600px){
   .bar{flex-wrap:nowrap;gap:8px}
@@ -1215,13 +1274,6 @@ a.ep.more .ep-n{background:var(--custard);color:var(--on-cherry)}
     <details class="fold" id="foldPlan"><summary><span class="f-ic">📅</span><span class="f-t">My 3-day plan<small id="planSum"></small></span></summary><section class="plan" id="planBox"></section></details>
     <details class="fold" id="foldExtras"><summary><span class="f-ic">⭐</span><span class="f-t">Extras<small>for fast finishers or homework</small></span></summary><div id="extrasBox"></div></details>
     <details class="fold" id="foldAll"><summary><span class="f-ic">▦</span><span class="f-t">All activities<small>by category</small></span></summary><section id="actGrid"></section></details>
-    <details class="fold" id="foldHow"><summary><span class="f-ic">📖</span><span class="f-t">How to use it<small>4 tips for parents</small></span></summary><ul class="howto">
-  <li><span class="h-ic">📖</span><span><b>Open the book.</b> Alice reads aloud. Tap any sentence to hear it again.</span></li>
-  <li><span class="h-ic">📅</span><span><b>One day of the plan per day</b>, about 15 minutes: the story first, then <span class="g-chip mint">Next task →</span></span></li>
-  <li><span class="h-ic">👧</span><span><b>Choose the level:</b> Little learners (5–7) or Big learners (8+).</span></li>
-  <li><span class="h-ic">💾</span><span>Stars and ticks are saved on this device. Recording and printing work only in the downloaded file.</span></li>
-</ul>
-</details>
   </div>
   </div>
 
@@ -3346,7 +3398,7 @@ function drawWorksheet(){const W=$('wsSheet'),little=LEVEL==='little',E=EPISODES
 STARTERS.worksheet=drawWorksheet;
 {const f=document.createElement('details');f.className='fold';f.id='foldWs';
   f.innerHTML='<summary><span class="f-ic">🖨</span><span class="f-t">Printable worksheet<small>for teachers and parents</small></span></summary><div><p class="note" style="margin:0 0 10px">A one-page worksheet for this story, for the chosen level: picture match, '+'gap-fill or copying, questions and a drawing box.</p><button class="btn" id="wsOpen">Open the worksheet</button></div>';
-  document.querySelector('#foldHow').before(f);$('wsOpen').onclick=()=>showView('worksheet')}
+  document.querySelector('.folds').append(f);$('wsOpen').onclick=()=>showView('worksheet')}
 
 /* ---------- Part 2 words & gap text (used by the worksheet) ---------- */
 Object.assign(EPISODES[4],{
@@ -3412,6 +3464,102 @@ if(/^https?:$/.test(location.protocol)&&'serviceWorker' in navigator&&document.q
   }catch(e){}},5000);
 }
 
+
+/* v23: "How to use this book" link under the Open button + move between episodes at any time */
+{
+const TIPS=[
+ ['📖','<b>Open the book.</b> Alice reads aloud. Tap any sentence to hear it again.'],
+ ['📅','<b>One day of the plan per day</b>, about 15 minutes: listen to the story first, then do the tasks.'],
+ ['👧','<b>Choose the level:</b> Little learners (5–7) or Big learners (8+).'],
+ ['📚','<b>Change episode any time</b> with the Episodes list or the arrows above the story.'],
+ ['🏠','<b>Home</b> takes you back to the bookshelf. <b>Continue</b> there opens the story where you stopped.'],
+ ['💾','Stars and stickers are saved on this device.']];
+const cta=document.querySelector('#cover .cta');
+if(cta){
+  const lk=el('button','howto-link','ℹ️ How to use this book');lk.type='button';lk.id='howLink';lk.setAttribute('aria-expanded','false');lk.setAttribute('aria-controls','howBox');
+  const box=el('div','howto-box');box.id='howBox';box.hidden=true;
+  const ul=el('ul','howto');TIPS.forEach(([i,t])=>ul.append(el('li','','<span class="h-ic">'+i+'</span><span>'+t+'</span>')));
+  const cl=el('button','howto-close','Close ✕');cl.type='button';
+  box.append(ul,cl);
+  const set=o=>{box.hidden=!o;lk.setAttribute('aria-expanded',o?'true':'false');lk.textContent=o?'ℹ️ Hide the tips':'ℹ️ How to use this book'};
+  lk.onclick=()=>set(box.hidden);cl.onclick=()=>{set(false);lk.focus()};
+  const len=cta.querySelector('.len');if(len)len.before(lk);else cta.append(lk);
+  cta.after(box);
+}
+
+/* episode switcher above the story (runs once the episode list exists) */
+setTimeout(()=>{
+const ORDER=[];SERIES.forEach(S=>S.items.forEach(it=>ORDER.push(Object.assign({v:S.v,file:S.file,group:S.group},it))));
+const label=it=>it.part?'Episode '+it.group.n+' · '+it.part+': '+it.t:'Episode '+it.n+': '+it.t;
+const short=it=>it.part?'Ep. '+it.group.n+' · '+it.part:'Episode '+it.n;
+const bar=el('nav','ep-switch');bar.setAttribute('aria-label','Episodes');
+const prev=el('button','ep-sw-btn prev'),mid=el('div','ep-sw-mid'),next=el('button','ep-sw-btn next');
+prev.type=next.type='button';bar.append(prev,mid,next);
+const reader=$('reader');if(reader)reader.before(bar);
+function go(it){
+  if(!it)return;
+  if(VOL.eps.includes(it.ep)){if(it.ep!==EP){applyEpisode(it.ep);drawHome()}showView('story');goPage(0,false);window.scrollTo({top:0,behavior:'smooth'})}
+  else location.href=it.file+'#ep'+it.ep+'s';
+}
+function drawSwitch(){
+  const i=ORDER.findIndex(o=>o.ep===EP),cur=ORDER[i],p=ORDER[i-1],n=ORDER[i+1];
+  mid.innerHTML='<small>Now reading</small><b>'+(cur?label(cur):'')+'</b>';
+  prev.innerHTML='<span aria-hidden="true">‹</span><span class="t">'+(p?short(p):'')+'</span>';prev.hidden=!p;prev.onclick=()=>go(p);
+  next.innerHTML='<span class="t">'+(n?short(n):'')+'</span><span aria-hidden="true">›</span>';next.hidden=!n;next.onclick=()=>go(n);
+  prev.setAttribute('aria-label',p?'Previous episode: '+label(p):'');next.setAttribute('aria-label',n?'Next episode: '+label(n):'');
+  prev.title=p?label(p)+(VOL.eps.includes(p.ep)?'':' (opens Volume '+p.v+')'):'';next.title=n?label(n)+(VOL.eps.includes(n.ep)?'':' (opens Volume '+n.v+')'):'';
+}
+{const _a=applyEpisode;applyEpisode=function(n){_a(n);drawSwitch()}}
+drawSwitch();
+/* arriving from "next episode" in another book: open the story straight away */
+if(/^#ep\ds$/.test(location.hash)){showView('story');goPage(0,false)}
+},0);
+}
+
+
+/* v24: friendlier book home – plan first (open), stickers second, clearer level choice, informative panel labels */
+{
+const folds=document.querySelector('.folds');
+const order=()=>{['foldPlan','foldStk','foldExtras','foldAll','foldWs'].forEach(id=>{const f=$(id);if(f)folds.append(f)})};
+order();
+const plan=$('foldPlan');if(plan)plan.open=true;
+const LV={little:{ic:'🐣',t:'Little learners',age:'Ages 5–7',d:'Shorter tasks, easier spelling, lots of pictures'},
+          big:{ic:'🦉',t:'Big learners',age:'Ages 8+',d:'More reading, writing and typing'}};
+function polishLevel(){
+  const lb=$('levelBox');if(!lb)return;lb.classList.add('lv2');
+  const head=lb.firstElementChild;if(head&&!head.dataset.v2){head.dataset.v2=1;head.innerHTML='<b>Who is reading?</b><small>Choose a level. The plan and the tasks change to match.</small>'}
+  lb.querySelectorAll('.level button').forEach((b,i)=>{const k=i===0?'little':'big',L=LV[k],on=b.getAttribute('aria-pressed')==='true';
+    b.className='lv-card'+(on?' on':'');
+    b.innerHTML='<span class="lv-ic" aria-hidden="true">'+L.ic+'</span><span class="lv-tx"><b>'+L.t+'</b><span class="lv-age">'+L.age+'</span><small>'+L.d+'</small></span><span class="lv-ok" aria-hidden="true">'+(on?'✓':'')+'</span>';
+    b.setAttribute('aria-label',L.t+', '+L.age+(on?', selected':''))});
+}
+function planSummary(){
+  const s=$('planSum');if(!s||typeof PLAN==='undefined')return;
+  const P=PLAN[LEVEL]||[];let today=-1;
+  P.forEach((D,d)=>{if(today<0&&!dayDone(d))today=d});
+  s.innerHTML='<span class="ps-dots">'+P.map((D,d)=>'<span class="ps-d'+(dayDone(d)?' ok':'')+(d===today?' now':'')+'">'+(dayDone(d)?'✓':d+1)+'</span>').join('')+'</span>'+
+    '<span class="ps-t">'+(today<0?'All 3 days done – well done!':'Next: '+P[today].t+' · '+P[today].sub)+'</span>';
+  const days=[...document.querySelectorAll('#planBox .day')];
+  days.forEach((c,d)=>{c.classList.toggle('today',d===today);
+    if(d===today&&!c.querySelector('.today-tag')){const t=el('span','today-tag','Today');c.querySelector('.day-top').append(t)}});
+  /* phones: one day at a time, with Day tabs */
+  const row=document.querySelector('#planBox .days');if(!row||!days.length)return;
+  row.classList.add('tabbed');let tabs=document.querySelector('#planBox .day-tabs');
+  if(!tabs){tabs=el('div','day-tabs');tabs.setAttribute('role','tablist');row.before(tabs)}
+  tabs.innerHTML='';const sel=window._daySel!=null&&window._daySel<days.length?window._daySel:(today<0?0:today);
+  days.forEach((c,d)=>{const b=el('button','day-tab'+(d===sel?' on':''),(dayDone(d)?'✓ ':'')+P[d].t+(d===today?' <span>Today</span>':''));
+    b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-selected',d===sel?'true':'false');
+    b.onclick=()=>{window._daySel=d;planSummary()};tabs.append(b);c.classList.toggle('sel',d===sel)});
+}
+function otherSums(){
+  const ex=$('foldExtras');if(ex&&!ex.hidden){const n=document.querySelectorAll('#extrasBox .ex').length;const sm=ex.querySelector('.f-t small');if(sm)sm.textContent=n+' extra game'+(n===1?'':'s')+' for fast finishers or homework'}
+  const al=$('foldAll');if(al){const n=document.querySelectorAll('#actGrid button, #actGrid .act-card, #actGrid a').length;const sm=al.querySelector('.f-t small');if(sm&&n)sm.textContent='All '+n+' tasks, by type'}
+  const st=$('stkSum');if(st&&typeof stickerState==='function'){const n=stickerState(EP).filter(x=>x[1]).length;st.innerHTML='<span class="stk-bar"><i style="width:'+Math.round(n/6*100)+'%"></i></span>'+n+' of 6 stickers in this story'}
+}
+{let _ep=null,_lv=null;const _dh=drawHome;drawHome=function(){if(_ep!==EP||_lv!==LEVEL){window._daySel=null;_ep=EP;_lv=LEVEL}_dh();order();polishLevel();planSummary();otherSums()}}
+polishLevel();planSummary();otherSums();
+}
+
 function applyEpisode(n){
   const E=EPISODES[n];if(!E)return;EP=n;store.set('cp-ep',n);
   if(!audio.paused)audio.pause();mode='story';stopClipUI();
@@ -3455,7 +3603,7 @@ drawSeries();
   const hb=$('homeBtn'),shelf=location.protocol==='file:'?'index.html':'./';hb.onclick=()=>{location.href=shelf};hb.setAttribute('aria-label','Home: back to the bookshelf');
   const bk=el('button','home book-btn','📖 This book');bk.setAttribute('aria-label','This book: back to the cover and the plan');bk.onclick=()=>showView('home');hb.after(bk)};if(/^https?:$/.test(location.protocol))shelfOn();else{const probe=new Image();probe.onload=shelfOn;probe.src='shelf-check.png'}}
 function prefetchVol(f){if(document.querySelector('link[data-pf="'+f+'"]'))return;const l=document.createElement('link');l.rel='prefetch';l.href=f;l.dataset.pf=f;document.head.append(l)}
-{const h=/^#ep(\d)$/.exec(location.hash);if(h&&VOL.eps.includes(+h[1]))EP=+h[1]}
+{const h=/^#ep(\d)s?$/.exec(location.hash);if(h&&VOL.eps.includes(+h[1]))EP=+h[1]}
 applyEpisode(VOL.eps.includes(EP)?EP:VOL.eps[0]);
 
 drawHome();
