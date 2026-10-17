@@ -1,0 +1,32 @@
+{
+ "name": "Cherry & Pudding's Adventures",
+ "short_name": "Cherry & Pudding",
+ "description": "True stories about Alice's two cats, read by Alice. Listen, read along and play.",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#fbf6ec",
+ "theme_color": "#12695d",
+ "lang": "en",
+ "icons": [
+  {
+   "src": "media/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "media/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "media/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
